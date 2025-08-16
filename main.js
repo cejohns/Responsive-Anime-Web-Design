@@ -16,7 +16,7 @@ document.querySelectorAll('.navbar a').forEach(link => {
   });
 });
 
-  var swiper = new Swiper(".home-slider", {
+var homeSwiper = new Swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -30,7 +30,7 @@ document.querySelectorAll('.navbar a').forEach(link => {
     loop:true,
   });
 
-  var swiper = new Swiper(".anime-slider", {
+  var animeSwiper = new Swiper(".anime-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
@@ -42,11 +42,29 @@ document.querySelectorAll('.navbar a').forEach(link => {
       el: ".swiper-pagination",
       clickable: true,
     },
-    loop:true
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    }
   });
 
 
-  var swiper = new Swiper(".action-slider", {
+  var actionSwiper = new Swiper(".action-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
@@ -58,11 +76,29 @@ document.querySelectorAll('.navbar a').forEach(link => {
       el: ".swiper-pagination",
       clickable: true,
     },
-    loop:true
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    }
   });
 
 
-  var swiper = new Swiper(".child-slider", {
+  var childSwiper = new Swiper(".child-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
@@ -74,10 +110,28 @@ document.querySelectorAll('.navbar a').forEach(link => {
       el: ".swiper-pagination",
       clickable: true,
     },
-    loop:true
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    }
   });
 
-  var swiper = new Swiper(".family-slider", {
+  var familySwiper = new Swiper(".family-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
@@ -89,6 +143,43 @@ document.querySelectorAll('.navbar a').forEach(link => {
       el: ".swiper-pagination",
       clickable: true,
     },
-    loop:true
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    }
   });
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
   
