@@ -21,6 +21,12 @@
 }
 body{
     background-color:var(--light-color);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 html{
@@ -40,6 +46,9 @@ section:nth-child(even){
 
 
 header{
+    position: fixed;
+    background: rgba(24, 24, 24, 0.95);
+    backdrop-filter: blur(10px);
     top: 0;
     left:0;
     right:0;
@@ -48,6 +57,10 @@ header{
     align-items: center;
     justify-content: space-between;
     z-index: 10000;
+}
+
+body {
+    padding-top: 80px;
 }
 
 .heading{
@@ -368,6 +381,221 @@ header .icons #menu-bars{
     background: var(--black);
     color: var(--red);
     transition: 0.3s all linear;
+}
+
+/* Loading animation */
+.swiper-slide {
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.05);
+}
+
+/* Improved button animations */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Scroll animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heading {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Fix for missing images - add placeholder styling */
+.box {
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+}
+
+/* Placeholder images for anime content */
+.home .swiper-slide:nth-child(1) .box {
+    background-image: url('https://images.pexels.com/photos/1666779/pexels-photo-1666779.jpeg') !important;
+}
+
+.home .swiper-slide:nth-child(2) .box {
+    background-image: url('https://images.pexels.com/photos/1666776/pexels-photo-1666776.jpeg') !important;
+}
+
+.home .swiper-slide:nth-child(3) .box {
+    background-image: url('https://images.pexels.com/photos/1666778/pexels-photo-1666778.jpeg') !important;
+}
+
+.home .swiper-slide:nth-child(4) .box {
+    background-image: url('https://images.pexels.com/photos/1666777/pexels-photo-1666777.jpeg') !important;
+}
+
+/* Anime section images */
+.anime .swiper-slide:nth-child(1) .box {
+    background-image: url('https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(2) .box {
+    background-image: url('https://images.pexels.com/photos/3945314/pexels-photo-3945314.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(3) .box {
+    background-image: url('https://images.pexels.com/photos/3945315/pexels-photo-3945315.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(4) .box {
+    background-image: url('https://images.pexels.com/photos/3945316/pexels-photo-3945316.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(5) .box {
+    background-image: url('https://images.pexels.com/photos/3945317/pexels-photo-3945317.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(6) .box {
+    background-image: url('https://images.pexels.com/photos/3945318/pexels-photo-3945318.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(7) .box {
+    background-image: url('https://images.pexels.com/photos/3945319/pexels-photo-3945319.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(8) .box {
+    background-image: url('https://images.pexels.com/photos/3945320/pexels-photo-3945320.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(9) .box {
+    background-image: url('https://images.pexels.com/photos/3945321/pexels-photo-3945321.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(10) .box {
+    background-image: url('https://images.pexels.com/photos/3945322/pexels-photo-3945322.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(11) .box {
+    background-image: url('https://images.pexels.com/photos/3945323/pexels-photo-3945323.jpeg') !important;
+}
+
+.anime .swiper-slide:nth-child(12) .box {
+    background-image: url('https://images.pexels.com/photos/3945324/pexels-photo-3945324.jpeg') !important;
+}
+
+/* Action section images */
+.action .swiper-slide:nth-child(1) .box {
+    background-image: url('https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg') !important;
+}
+
+.action .swiper-slide:nth-child(2) .box {
+    background-image: url('https://images.pexels.com/photos/2047906/pexels-photo-2047906.jpeg') !important;
+}
+
+.action .swiper-slide:nth-child(3) .box {
+    background-image: url('https://images.pexels.com/photos/2047907/pexels-photo-2047907.jpeg') !important;
+}
+
+.action .swiper-slide:nth-child(4) .box {
+    background-image: url('https://images.pexels.com/photos/2047908/pexels-photo-2047908.jpeg') !important;
+}
+
+.action .swiper-slide:nth-child(5) .box {
+    background-image: url('https://images.pexels.com/photos/2047909/pexels-photo-2047909.jpeg') !important;
+}
+
+.action .swiper-slide:nth-child(6) .box {
+    background-image: url('https://images.pexels.com/photos/2047910/pexels-photo-2047910.jpeg') !important;
+}
+
+.action .swiper-slide:nth-child(7) .box {
+    background-image: url('https://images.pexels.com/photos/2047911/pexels-photo-2047911.jpeg') !important;
+}
+
+.action .swiper-slide:nth-child(8) .box {
+    background-image: url('https://images.pexels.com/photos/2047912/pexels-photo-2047912.jpeg') !important;
+}
+
+/* Child section images */
+.child .swiper-slide:nth-child(1) .box {
+    background-image: url('https://images.pexels.com/photos/1666780/pexels-photo-1666780.jpeg') !important;
+}
+
+.child .swiper-slide:nth-child(2) .box {
+    background-image: url('https://images.pexels.com/photos/1666781/pexels-photo-1666781.jpeg') !important;
+}
+
+.child .swiper-slide:nth-child(3) .box {
+    background-image: url('https://images.pexels.com/photos/1666782/pexels-photo-1666782.jpeg') !important;
+}
+
+.child .swiper-slide:nth-child(4) .box {
+    background-image: url('https://images.pexels.com/photos/1666783/pexels-photo-1666783.jpeg') !important;
+}
+
+.child .swiper-slide:nth-child(5) .box {
+    background-image: url('https://images.pexels.com/photos/1666784/pexels-photo-1666784.jpeg') !important;
+}
+
+.child .swiper-slide:nth-child(6) .box {
+    background-image: url('https://images.pexels.com/photos/1666785/pexels-photo-1666785.jpeg') !important;
+}
+
+.child .swiper-slide:nth-child(7) .box {
+    background-image: url('https://images.pexels.com/photos/1666786/pexels-photo-1666786.jpeg') !important;
+}
+
+/* Family section images */
+.family .swiper-slide:nth-child(1) .box {
+    background-image: url('https://images.pexels.com/photos/3945325/pexels-photo-3945325.jpeg') !important;
+}
+
+.family .swiper-slide:nth-child(2) .box {
+    background-image: url('https://images.pexels.com/photos/3945326/pexels-photo-3945326.jpeg') !important;
+}
+
+.family .swiper-slide:nth-child(3) .box {
+    background-image: url('https://images.pexels.com/photos/3945327/pexels-photo-3945327.jpeg') !important;
+}
+
+.family .swiper-slide:nth-child(4) .box {
+    background-image: url('https://images.pexels.com/photos/3945328/pexels-photo-3945328.jpeg') !important;
+}
+
+.family .swiper-slide:nth-child(5) .box {
+    background-image: url('https://images.pexels.com/photos/3945329/pexels-photo-3945329.jpeg') !important;
+}
+
+.family .swiper-slide:nth-child(6) .box {
+    background-image: url('https://images.pexels.com/photos/3945330/pexels-photo-3945330.jpeg') !important;
+}
+
+.family .swiper-slide:nth-child(7) .box {
+    background-image: url('https://images.pexels.com/photos/3945331/pexels-photo-3945331.jpeg') !important;
+}
+
+.family .swiper-slide:nth-child(8) .box {
+    background-image: url('https://images.pexels.com/photos/3945332/pexels-photo-3945332.jpeg') !important;
 }
 
 

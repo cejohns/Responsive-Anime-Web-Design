@@ -1,13 +1,22 @@
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 
-menu.onclick = () =>{
-  menu.classList.toggle('fa-times');
-  navbar.classList.toggle('active');
+if (menu && navbar) {
+  menu.onclick = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+  }
 }
 
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+  });
+});
 
-var swiper = new Swiper(".home-slider", {
+var homeSwiper = new Swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -21,7 +30,7 @@ var swiper = new Swiper(".home-slider", {
     loop:true,
   });
 
-  var swiper = new Swiper(".anime-slider", {
+  var animeSwiper = new Swiper(".anime-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
@@ -33,11 +42,29 @@ var swiper = new Swiper(".home-slider", {
       el: ".swiper-pagination",
       clickable: true,
     },
-    loop:true
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    }
   });
 
 
-  var swiper = new Swiper(".action-slider", {
+  var actionSwiper = new Swiper(".action-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
@@ -49,11 +76,29 @@ var swiper = new Swiper(".home-slider", {
       el: ".swiper-pagination",
       clickable: true,
     },
-    loop:true
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    }
   });
 
 
-  var swiper = new Swiper(".child-slider", {
+  var childSwiper = new Swiper(".child-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
@@ -65,10 +110,28 @@ var swiper = new Swiper(".home-slider", {
       el: ".swiper-pagination",
       clickable: true,
     },
-    loop:true
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    }
   });
 
-  var swiper = new Swiper(".family-slider", {
+  var familySwiper = new Swiper(".family-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
@@ -80,6 +143,50 @@ var swiper = new Swiper(".home-slider", {
       el: ".swiper-pagination",
       clickable: true,
     },
-    loop:true
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    }
   });
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    // Check if href is just '#' and return early to avoid invalid selector
+    const href = this.getAttribute('href');
+    if (href === '#') {
+      return;
+    }
+    
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
   
