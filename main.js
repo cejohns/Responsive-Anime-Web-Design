@@ -168,7 +168,14 @@ var homeSwiper = new Swiper(".home-slider", {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    
+    // Check if href is just '#' and return early to avoid invalid selector
+    const href = this.getAttribute('href');
+    if (href === '#') {
+      return;
+    }
+    
+    const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({
         behavior: 'smooth',
