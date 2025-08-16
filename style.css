@@ -439,68 +439,68 @@ header .icons #menu-bars{
 
 /* Placeholder images for anime content */
 .home .swiper-slide:nth-child(1) .box {
-    background-image: url('https://images.pexels.com/photos/1666779/pexels-photo-1666779.jpeg') !important;
+    background-image: url('img/img/popular/anime/action/Naruto.jpg') !important;
 }
 
 .home .swiper-slide:nth-child(2) .box {
-    background-image: url('https://images.pexels.com/photos/1666776/pexels-photo-1666776.jpeg') !important;
+    background-image: url('img/img/featured/Death_Note.jpg') !important;
 }
 
 .home .swiper-slide:nth-child(3) .box {
-    background-image: url('https://images.pexels.com/photos/1666778/pexels-photo-1666778.jpeg') !important;
+    background-image: url('img/img/featured/One_Punch_Man.jpg') !important;
 }
 
 .home .swiper-slide:nth-child(4) .box {
-    background-image: url('https://images.pexels.com/photos/1666777/pexels-photo-1666777.jpeg') !important;
+    background-image: url('img/img/featured/Naruto.jpg') !important;
 }
 
 /* Anime section images */
 .anime .swiper-slide:nth-child(1) .box {
-    background-image: url('https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg') !important;
+    background-image: url('img/img/popular/anime/action/Naruto.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(2) .box {
-    background-image: url('https://images.pexels.com/photos/3945314/pexels-photo-3945314.jpeg') !important;
+    background-image: url('img/img/featured/One_Punch_Man.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(3) .box {
-    background-image: url('https://images.pexels.com/photos/3945315/pexels-photo-3945315.jpeg') !important;
+    background-image: url('img/img/featured/Death_Note.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(4) .box {
-    background-image: url('https://images.pexels.com/photos/3945316/pexels-photo-3945316.jpeg') !important;
+    background-image: url('img/img/popular/anime/action/Black_Clover.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(5) .box {
-    background-image: url('https://images.pexels.com/photos/3945317/pexels-photo-3945317.jpeg') !important;
+    background-image: url('img/img/popular/anime/action/Jujutsu_Kaisen.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(6) .box {
-    background-image: url('https://images.pexels.com/photos/3945318/pexels-photo-3945318.jpeg') !important;
+    background-image: url('img/img/popular/anime/sports/Haikyu.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(7) .box {
-    background-image: url('https://images.pexels.com/photos/3945319/pexels-photo-3945319.jpeg') !important;
+    background-image: url('img/img/popular/anime/sports/Kuroko_Basketball.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(8) .box {
-    background-image: url('https://images.pexels.com/photos/3945320/pexels-photo-3945320.jpeg') !important;
+    background-image: url('img/img/popular/anime/sports/My_Hero_Academia.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(9) .box {
-    background-image: url('https://images.pexels.com/photos/3945321/pexels-photo-3945321.jpeg') !important;
+    background-image: url('img/img/popular/anime/sports/Dr_Stone.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(10) .box {
-    background-image: url('https://images.pexels.com/photos/3945322/pexels-photo-3945322.jpeg') !important;
+    background-image: url('img/img/popular/anime/action/Tokyo_Revengers.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(11) .box {
-    background-image: url('https://images.pexels.com/photos/3945323/pexels-photo-3945323.jpeg') !important;
+    background-image: url('img/img/popular/anime/action/Sword_Art_Online.jpg') !important;
 }
 
 .anime .swiper-slide:nth-child(12) .box {
-    background-image: url('https://images.pexels.com/photos/3945324/pexels-photo-3945324.jpeg') !important;
+    background-image: url('img/img/popular/anime/action/Kengan_Ashura.jpg') !important;
 }
 
 /* Action section images */
